@@ -1,0 +1,7 @@
+name: 'Test Action'
+description: 'A simple test action for PoC'
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "Hello from SAFE action v1"
+      shell: bash
