@@ -3,16 +3,5 @@ description: 'A simple test action'
 runs:
   using: 'composite'
   steps:
-    - run: |
-        echo "!! ACTION COMPROMISED — tag v1 was poisoned !!"
-        echo ""
-        echo "In a real attack, this code would now:"
-        echo "  - Steal GITHUB_TOKEN, AWS_ACCESS_KEY, API keys"
-        echo "  - Exfiltrate secrets to attacker's server"
-        echo "  - Inject backdoors into the deployment"
-        echo ""
-        echo "Proof of access to CI environment:"
-        echo "  GITHUB_REPOSITORY = $GITHUB_REPOSITORY"
-        echo "  GITHUB_WORKFLOW   = $GITHUB_WORKFLOW"
-        echo "  RUNNER_NAME       = $RUNNER_NAME"
+    - run: echo "Hello from SAFE action v1 - everything is fine!"
       shell: bash
