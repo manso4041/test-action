@@ -1,11 +1,7 @@
 name: 'Test Action'
-description: 'A simple test action for PoC'
+description: 'A simple test action'
 runs:
   using: 'composite'
   steps:
-    - run: |
-        echo "ACTION COMPROMISED - Tag v1 has been poisoned!"
-        echo "If this were real, I could steal secrets like GITHUB_TOKEN, AWS keys, API keys..."
-        echo "Dumping env to prove access:"
-        env | grep -i "GITHUB_\|RUNNER_\|CI" | head -10
+    - run: echo "Hello from SAFE action v1 - everything is fine!"
       shell: bash
